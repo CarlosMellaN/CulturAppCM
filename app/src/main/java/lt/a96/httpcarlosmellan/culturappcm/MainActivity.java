@@ -67,12 +67,18 @@ public class MainActivity extends AppCompatActivity {
                 Response.Listener<String> responseListener = new Response.Listener<String>(){
                     @Override
                     public void onResponse(String response) {
-
+                        //alerta para mostrar el resultado del response
+                        AlertDialog.Builder builder2 = new AlertDialog.Builder(MainActivity.this);
+                        builder2.setMessage("Response")
+                                .setNegativeButton(response, null)
+                                .create()
+                                .show();
+                        //fin alerta
 
                         try {
                             JSONObject jsonResponse = new JSONObject(response);
-                            //boolean success = jsonResponse.getBoolean("success");
-                            if(response!=null){
+                            boolean success = jsonResponse.getBoolean("success");
+                            if(success){
                                 //String Nombre = jsonResponse.getString("Nombre");
                                 //String Descripcion = jsonResponse.getString("Descripcion");
                                 //String FechaInicio = jsonResponse.getString("FechaInicio");
@@ -81,14 +87,6 @@ public class MainActivity extends AppCompatActivity {
                                 //String HoraInicio = jsonResponse.getString("HoraInicio");
                                 //String HoraFin = jsonResponse.getString("HoraFin");
                                 //String Estado = jsonResponse.getString("Estado");
-
-                                //alerta para mostrar el resultado del response
-                                AlertDialog.Builder builder2 = new AlertDialog.Builder(MainActivity.this);
-                                builder2.setMessage("entra al if")
-                                    .setNegativeButton(response, null)
-                                    .create()
-                                    .show();
-                                    //fin alerta
 
                                 Intent intent = new Intent(MainActivity.this, Eventos.class);
                                 intent.putExtra("Nombre", Nombre);
