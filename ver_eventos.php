@@ -1,6 +1,6 @@
 <?php
 	include ('conexion.php');
-	if($_SERVER["REQUEST_METHOD"]=="POST"){
+	if($_SERVER["REQUEST_METHOD"]=="GET"){
 		include ('conexion.php');
 		verEvento();
 	}
@@ -9,12 +9,12 @@
 	{
 		global $con;
 
-		$query = "SELECT Nombre, Descripcion, FechaInicio, FechaFin, Localizacion, HoraInicio, HoraFin, Estado FROM eventos";
+		$query = "SELECT IdEvento, Nombre, Descripcion, FechaInicio, FechaFin, Localizacion, HoraInicio, HoraFin, Estado FROM eventos";
 		$result = mysqli_query($con, $query);
 		$number_of_rows = mysqli_num_rows($result);
 
 		$response = array();
-		$response["success"] = true;
+		//$response["success"] = true;
 
 		if($number_of_rows > 0){
 			while ($row = mysqli_fetch_assoc($result)){
@@ -22,15 +22,14 @@
 			}
 		}
 		header('Content-Type: application/json');
+		//con ese eventos se identifica
 		echo json_encode(array("eventos"=>$response));
-
-		//echo json_encode($response);
 
 		mysqli_close($con);
 
 	}
 	/*
-            Id_EVento
+            IdEVento
             Nombre
             Descripcion
             FechaInicio
