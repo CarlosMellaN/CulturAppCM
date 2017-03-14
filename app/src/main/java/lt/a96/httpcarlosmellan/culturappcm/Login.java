@@ -16,7 +16,11 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+
 public class Login extends AppCompatActivity {
+
+
+
     EditText et_usuario, et_password;
     TextView tv_registarusuario;
     Button btn_entrar, btn_cancelar;
@@ -44,6 +48,8 @@ public class Login extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
 
         btn_entrar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -95,5 +101,9 @@ public class Login extends AppCompatActivity {
 
             }
         });
+
+
     }
+
+
 }

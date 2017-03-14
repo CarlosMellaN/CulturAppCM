@@ -20,7 +20,8 @@
         <activity android:name=".RegistrarUsuarios" />
         <activity android:name=".Perfil" />
         <activity android:name=".Login" />
-        <activity android:name=".Eventos"></activity>
+        <activity android:name=".Eventos" />
+        <activity android:name=".DetalleEvento"></activity>
     </application>
 
 </manifest>
