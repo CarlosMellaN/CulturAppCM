@@ -109,11 +109,11 @@ public class Eventos extends AppCompatActivity {
         requestQueue.add(jsonObjectRequest);
     }
 
-    //muestra todos los eventos uno por uno, en vez de solo el selecionado
+    //muestra todos los eventos uno por uno, en vez de solo el seleccionado
     public void EventoDetalle(){
         //final String IdEvento = tv_localizacion.getText().toString();
         //RecibeEventos();
-        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.POST, getEventos, null, new Response.Listener<JSONObject>() {
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, getEventos, null, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
                 try {
