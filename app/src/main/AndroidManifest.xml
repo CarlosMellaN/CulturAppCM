@@ -21,7 +21,8 @@
         <activity android:name=".Perfil" />
         <activity android:name=".Login" />
         <activity android:name=".Eventos" />
-        <activity android:name=".DetalleEvento"></activity>
+        <activity android:name=".DetalleEvento" />
+        <activity android:name=".CrearEvento"></activity>
     </application>
 
 </manifest>

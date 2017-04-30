@@ -272,7 +272,7 @@ public class Eventos extends AppCompatActivity {
                         String FechaFin = jsonObject.getString("FechaFin");
                         String HoraInicio = jsonObject.getString("HoraInicio");
                         String HoraFin = jsonObject.getString("HoraFin");
-                        
+
                         texto = "Nombre: " +
                                 jsonObject.getString("Nombre") +
                                 "\n"+"Hora de comienzo: \n" +

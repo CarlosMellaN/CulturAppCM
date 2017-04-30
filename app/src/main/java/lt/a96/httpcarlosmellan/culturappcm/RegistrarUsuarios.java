@@ -14,7 +14,6 @@ import android.widget.Toast;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
-import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
 import org.json.JSONException;
@@ -51,6 +50,7 @@ public class RegistrarUsuarios extends AppCompatActivity {
             }
         });
 
+        // TODO: hacer que no se puedan crear usuarios con el mismo email
         btn_crearusuario.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -95,6 +95,7 @@ public class RegistrarUsuarios extends AppCompatActivity {
                                 boolean success = jsonResponse.getBoolean("success");
 
                                 if(success){
+                                    Toast.makeText(RegistrarUsuarios.this,"Usuario creado con exito",Toast.LENGTH_LONG).show();
                                     Intent intent = new Intent(RegistrarUsuarios.this, Login.class);
                                     RegistrarUsuarios.this.startActivity(intent);
                                 }else{

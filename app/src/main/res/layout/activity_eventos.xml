@@ -4,40 +4,46 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="lt.a96.httpcarlosmellan.culturappcm.Eventos"
-    android:background="@drawable/celeste">
+    android:background="#2E9AFE">
 
-    <ScrollView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <LinearLayout
+        <SearchView
+            android:id="@+id/sv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:queryHint="Buscar evento">
+
+        </SearchView>
+
+        <ListView
+            android:id="@+id/lv_eventoss"
+            android:layout_width="match_parent"
+            android:textColor="#FFFFFF"
+            android:layout_height="match_parent"></ListView>
+
+        <TextView
+            android:id="@+id/tv_descripcion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:text="---" />
 
-            <SearchView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/tv_localizacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="GG" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/tv_evento"
-                android:textSize="18sp"
-                android:autoText="false" />
+        <TextView
+            android:id="@+id/tv_evento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autoText="false"
+            android:textSize="18sp" />
 
-            <TextView
-                android:text="---"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/tv_descripcion" />
+    </LinearLayout>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/tv_localizacion"
-                android:text="1" />
-
-        </LinearLayout>
-    </ScrollView>
 </LinearLayout>

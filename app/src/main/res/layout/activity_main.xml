@@ -9,7 +9,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="lt.a96.httpcarlosmellan.culturappcm.MainActivity"
-    android:background="@drawable/fondoceleste"
+    android:background="#2E9AFE"
     >
 
     <ScrollView
@@ -39,6 +39,7 @@
                     android:layout_height="match_parent"
                     android:id="@+id/btn_eventos"
                     android:layout_weight="0.40" />
+
             </LinearLayout>
 
             <LinearLayout

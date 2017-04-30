@@ -10,7 +10,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="lt.a96.httpcarlosmellan.culturappcm.RegistrarUsuarios"
     android:weightSum="1"
-    android:background="@drawable/celeste">
+    android:background="#2E9AFE">
 
 
     <ScrollView

@@ -8,11 +8,13 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="lt.a96.httpcarlosmellan.culturappcm.DetalleEvento">
+    tools:context="lt.a96.httpcarlosmellan.culturappcm.DetalleEvento"
+    android:background="#2E9AFE">
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:ignore="UselessParent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -20,9 +22,11 @@
             android:orientation="vertical" >
 
             <TextView
+                android:id="@+id/tv_evnombre"
+                android:textColor="#FFFFFF"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/tv_evnombre" />
+                android:textSize="18sp" />
 
             <TextView
                 android:layout_width="match_parent"

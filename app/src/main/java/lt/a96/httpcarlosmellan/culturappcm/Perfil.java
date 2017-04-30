@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 public class Perfil extends AppCompatActivity {
     TextView et_nombreusuario, et_mail, et_nombre, et_genero, et_mensaje;
-    Button btn_eventos;
+    Button btn_eventos, btn_crearevento;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +22,7 @@ public class Perfil extends AppCompatActivity {
         et_genero = (TextView) findViewById(R.id.et_genero);
         et_mensaje = (TextView) findViewById(R.id.et_mensaje);
         btn_eventos = (Button)findViewById(R.id.btn_eventos);
+        btn_crearevento = (Button)findViewById(R.id.btn_crearevento);
 
         Intent intent = getIntent();
         String email = intent.getStringExtra("email");
@@ -40,6 +41,15 @@ public class Perfil extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent =  new Intent(Perfil.this, Eventos.class);
+                startActivity(intent);
+
+            }
+        });
+
+        btn_crearevento.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent =  new Intent(Perfil.this, CrearEvento.class);
                 startActivity(intent);
 
             }
