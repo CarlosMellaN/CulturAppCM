@@ -93,10 +93,8 @@ public class Eventos extends AppCompatActivity {
         lv_eventoss.setOnItemClickListener(new android.widget.AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                //Al pasar la funcion recibedatos aca, hay un problema con el RequestQueue que dice que no se puede aplicar
-                //en un clicklistener
                 Intent intent =  new Intent(Eventos.this, DetalleEvento.class);
-                //intent.putExtra(texto, lv_eventoss.getItemAtPosition(position).toString());
+                intent.putExtra(texto, lv_eventoss.getItemAtPosition(position).toString());
                 intent.putExtra("Nombre", lv_eventoss.getItemAtPosition(position).toString());
                 //intent.putExtra("Descripcion", lv_eventoss.getItemAtPosition(position).toString());
                 //intent.putExtra("Localizacion", lv_eventoss.getItemAtPosition(position).toString());
@@ -252,7 +250,6 @@ public class Eventos extends AppCompatActivity {
     public void RecibeDatos(){
         //super.onStart();
         // Create request queue
-        //esto es donde esta el error al moverlo al onitemclicklistener
         RequestQueue requestQueue= Volley.newRequestQueue(this);
         //  Create json array request
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, getEventos, null, new Response.Listener<JSONObject>() {
@@ -293,12 +290,13 @@ public class Eventos extends AppCompatActivity {
                         intent.putExtra("HoraFin", HoraFin);
                         //System.out.println(IdEvento);
                         //Eventos.this.startActivity(intent);
-                        items.add("Nombre: "+ Nombre+"\n"+"Descripcion: "+Descripcion);
+                        items.add("Nombre: "+Nombre+"\n"+"Descripcion: "+Descripcion);
+                        //items.add("Nombre: "+ Nombre+"\n"+"Descripcion: "+Descripcion+"\n"+"Hora de inicio: "+HoraInicio+"\n"+"Hora de finalizacion: "+HoraFin+"\n"+"Fecha de inicio: "+FechaInicio+"\n"+"Fecha de finalizcion: "+FechaFin+"\n"+"Lugar donde se realizara: "+Localizacion);
                         //items.add("Localizacion");
 
                         //items.add(jsonObject.getString("Localizacion"));
                         //items.add(texto);
-                        //Eventos.this.startActivity(intent);
+                        
                     }
                     adapter.notifyDataSetChanged();
                 } catch (JSONException e) {

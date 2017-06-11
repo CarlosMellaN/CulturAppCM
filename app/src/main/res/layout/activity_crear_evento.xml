@@ -26,6 +26,7 @@
                 android:id="@+id/et_nombreevento"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textCursorDrawable="@null"
                 android:ems="10"
                 android:inputType="textPersonName" />
 
@@ -39,6 +40,7 @@
                 android:id="@+id/et_descripcionevento"
                 android:layout_width="match_parent"
                 android:layout_height="126dp"
+                android:textCursorDrawable="@null"
                 android:ems="10"
                 android:inputType="textMultiLine" />
 
@@ -52,6 +54,7 @@
                 android:id="@+id/et_fechainicio"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textCursorDrawable="@null"
                 android:ems="10"
                 android:inputType="date" />
 
@@ -65,6 +68,7 @@
                 android:id="@+id/et_fechafin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textCursorDrawable="@null"
                 android:ems="10"
                 android:inputType="date" />
 
@@ -78,6 +82,7 @@
                 android:id="@+id/et_ubicacion"
                 android:layout_width="match_parent"
                 android:layout_height="83dp"
+                android:textCursorDrawable="@null"
                 android:ems="10"
                 android:inputType="textMultiLine" />
 
@@ -91,6 +96,7 @@
                 android:id="@+id/et_horainicio"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textCursorDrawable="@null"
                 android:ems="10"
                 android:inputType="time" />
 
@@ -104,6 +110,7 @@
                 android:id="@+id/et_horafin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textCursorDrawable="@null"
                 android:ems="10"
                 android:inputType="time" />
 

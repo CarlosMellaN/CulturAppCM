@@ -25,10 +25,10 @@ public class Perfil extends AppCompatActivity {
         btn_crearevento = (Button)findViewById(R.id.btn_crearevento);
 
         Intent intent = getIntent();
-        String email = intent.getStringExtra("email");
-        String nombre = intent.getStringExtra("nombre");
-        String nombreusuario = intent.getStringExtra("nombreusuario");
-        String genero = intent.getStringExtra("genero");
+        final String email = intent.getStringExtra("email");
+        final String nombre = intent.getStringExtra("nombre");
+        final String nombreusuario = intent.getStringExtra("nombreusuario");
+        final String genero = intent.getStringExtra("genero");
 
         String mensaje = "Bienvenido a tu perfil " + nombreusuario;
         et_mensaje.setText(mensaje);
@@ -49,8 +49,14 @@ public class Perfil extends AppCompatActivity {
         btn_crearevento.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 Intent intent =  new Intent(Perfil.this, CrearEvento.class);
+                intent.putExtra("email", email);
+                intent.putExtra("nombre", nombre);
+                intent.putExtra("nombreusuario", nombreusuario);
+                intent.putExtra("genero", genero);
                 startActivity(intent);
+
 
             }
         });
