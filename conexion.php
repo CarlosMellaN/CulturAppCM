@@ -3,8 +3,8 @@
 //MySQLi coneccion
 //Datos de la base en localhost
 $servername = "localhost";
-$username = "Carlos";
-$password = "qwe123";
+$username = "user";
+$password = "pass";
 $dbname = "culturappcm";
 
 $con = new mysqli($servername, $username, $password, $dbname);
