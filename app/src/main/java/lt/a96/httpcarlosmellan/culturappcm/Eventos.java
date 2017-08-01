@@ -41,8 +41,8 @@ public class Eventos extends AppCompatActivity {
     TextView tv_evento, tv_descripcion, tv_localizacionn, tv_eventoss, tv_descripcionn;
     RequestQueue requestQueue;
     ListView lv_eventoss;
-    String getEventos = "http://192.168.1.158/culturappcm/ver_eventos.php";
-    String getEventos2 = "http://192.168.1.158/culturappcm/ver_eventos2.php";
+    String getEventos = "http://192.168.1.158:8080/culturappcm/ver_eventos.php";
+    String getEventos2 = "http://192.168.1.158:8080/culturappcm/ver_eventos2.php";
     String texto;
     ArrayAdapter<String> adapter;
     ArrayList<String> items;
@@ -94,8 +94,8 @@ public class Eventos extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent =  new Intent(Eventos.this, DetalleEvento.class);
-                intent.putExtra(texto, lv_eventoss.getItemAtPosition(position).toString());
                 intent.putExtra("Nombre", lv_eventoss.getItemAtPosition(position).toString());
+                //intent.putExtra("texto", lv_eventoss.getItemAtPosition(position).toString());
                 //intent.putExtra("Descripcion", lv_eventoss.getItemAtPosition(position).toString());
                 //intent.putExtra("Localizacion", lv_eventoss.getItemAtPosition(position).toString());
                 startActivity(intent);
@@ -258,7 +258,6 @@ public class Eventos extends AppCompatActivity {
                 // So parse it and populate the listview
                 try {
                     JSONArray jsonArray = response.getJSONArray("eventos");
-                    texto="";
                     for(int i=0;i<jsonArray.length();i++){
                         JSONObject jsonObject=jsonArray.getJSONObject(i);
 
@@ -288,6 +287,8 @@ public class Eventos extends AppCompatActivity {
                         intent.putExtra("FechaFin", FechaFin);
                         intent.putExtra("HoraInicio", HoraInicio);
                         intent.putExtra("HoraFin", HoraFin);
+                        intent.putExtra("texto", texto);
+                        //Va a pasar a la otra pantalla el dato que envie de aca, pero si envio mas de 1, tsmbien se muestra mas de 1 en esta pantalla
                         //System.out.println(IdEvento);
                         //Eventos.this.startActivity(intent);
                         items.add("Nombre: "+Nombre+"\n"+"Descripcion: "+Descripcion);
@@ -296,7 +297,7 @@ public class Eventos extends AppCompatActivity {
 
                         //items.add(jsonObject.getString("Localizacion"));
                         //items.add(texto);
-                        
+
                     }
                     adapter.notifyDataSetChanged();
                 } catch (JSONException e) {

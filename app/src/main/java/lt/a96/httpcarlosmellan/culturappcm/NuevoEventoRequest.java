@@ -11,7 +11,7 @@ import java.util.Map;
  */
 
 public class NuevoEventoRequest extends StringRequest {
-    private static final String NUEVOEVENTO_REQUEST_URL = "http://192.168.1.158/culturappcm/crear_evento.php";
+    private static final String NUEVOEVENTO_REQUEST_URL = "http://192.168.1.158:8080/culturappcm/crear_evento.php";
     private Map<String, String> params;
 
     public NuevoEventoRequest(String Nombre, String Descripcion, String FechaInicio, String FechaFin, String Localizacion, String HoraInicio, String HoraFin, Response.Listener<String> listener) {

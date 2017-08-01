@@ -11,6 +11,7 @@ import com.android.volley.RequestQueue;
 public class DetalleEvento extends AppCompatActivity {
     TextView tv_evnombre, tv_evdescripcion, tv_evlocalizacion, tv_evhorainicio, tv_evhorafin, tv_evfechainicio, tv_evfechafin, tv_texto;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,6 +28,7 @@ public class DetalleEvento extends AppCompatActivity {
 
 
 
+
         Intent intent = getIntent();
         //String IdEvento = intent.getStringExtra("IdEvento");
         String Nombre = intent.getStringExtra("Nombre");
@@ -37,6 +39,7 @@ public class DetalleEvento extends AppCompatActivity {
         String HoraInicio = intent.getStringExtra("HoraInicio");
         String HoraFin = intent.getStringExtra("HoraFin");
         String Texto = intent.getStringExtra("texto");
+        //String Texto = getIntent().getExtras().getString("texto");
 
         tv_evnombre.setText(Nombre);
         tv_evdescripcion.setText(Descripcion);

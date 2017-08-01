@@ -11,7 +11,7 @@ import java.util.Map;
  */
 
 public class RegistroRequest  extends StringRequest {
-    private static final String REGISTER_REQUEST_URL = "http://192.168.1.158/culturappcm/registrousuarios.php";
+    private static final String REGISTER_REQUEST_URL = "http://192.168.1.158:8080/culturappcm/registrousuarios.php";
     private Map<String, String> params;
 
     public RegistroRequest (String email, String nombre, String nombreusuario, String contrasena, String genero, Response.Listener<String> listener) {
