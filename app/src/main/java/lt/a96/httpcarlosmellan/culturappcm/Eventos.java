@@ -289,7 +289,6 @@ public class Eventos extends AppCompatActivity {
                         intent.putExtra("HoraFin", HoraFin);
                         intent.putExtra("texto", texto);
                         //Va a pasar a la otra pantalla el dato que envie de aca, pero si envio mas de 1, tsmbien se muestra mas de 1 en esta pantalla
-                        //System.out.println(IdEvento);
                         //Eventos.this.startActivity(intent);
                         items.add("Nombre: "+Nombre+"\n"+"Descripcion: "+Descripcion);
                         //items.add("Nombre: "+ Nombre+"\n"+"Descripcion: "+Descripcion+"\n"+"Hora de inicio: "+HoraInicio+"\n"+"Hora de finalizacion: "+HoraFin+"\n"+"Fecha de inicio: "+FechaInicio+"\n"+"Fecha de finalizcion: "+FechaFin+"\n"+"Lugar donde se realizara: "+Localizacion);
