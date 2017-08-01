@@ -31,7 +31,7 @@ public class Perfil extends AppCompatActivity {
         final String genero = intent.getStringExtra("genero");
 
         String mensaje = "Bienvenido a tu perfil " + nombreusuario;
-        // TODO aprender a usar sharedpreferences para manejar los datos de usuario
+        // TODO aprender a usar sharedpreferences para manejar los datos de usuarios
         et_mensaje.setText(mensaje);
         et_nombreusuario.setText(nombreusuario);
         et_mail.setText(email);
