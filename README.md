@@ -11,5 +11,7 @@ Para crear eventos es necesario tener cuenta en la aplicacion
 ```
 #### To-do
 Mostrar detalle de los eventos en otra vista
+
 Conectar con la api de GoogleMaps
+
 Conectar con la api de Google para la creacion de usuarios
