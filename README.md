@@ -4,7 +4,7 @@ Esta Aplicacion esta desarrollada en android studio y se conecta con una base de
 
 Cuenta con la opcion de crear usuarios y eventos
 
-Los eventos se pueden ver si la necesidad de crear una cuenta de usuario
+Los eventos se pueden ver sin la necesidad de crear una cuenta de usuario
 
 Para crear eventos es necesario tener cuenta en la aplicacion
 
